@@ -8,7 +8,7 @@ Responsive public website and a separate role-based staff portal for Sepidan Org
 - Sepidan Organization’s official name, logo, tagline, public organization details, email, location, WhatsApp number, and activity summaries
 - Accessible infinite program-area marquee on the homepage
 - English and Dari language switching with automatic LTR/RTL layout
-- Locally bundled 29LT Zarid Slab font family for both scripts
+- Locally bundled 29LT Zawi font family for both scripts
 - No public login link
 - Separate `portal.html` login for exactly three roles: Admin, HR, and IT
 - Automatic role-based dashboard rendering

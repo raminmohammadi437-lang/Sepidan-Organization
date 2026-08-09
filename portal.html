@@ -5,33 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Secure Sepidan Organization staff portal for HR, Admin, and IT.">
   <title>Sepidan Organization | Staff Portal</title>
-  <link rel="icon" href="assets/sepidan-logo.png">
-  <link rel="stylesheet" href="styles.css?v=8">
-  <script src="js/i18n.js?v=3" defer></script>
-  <script src="js/portal.js?v=7" defer></script>
+  <link rel="icon" href="assets/sepidan-logo-official.png">
+  <link rel="stylesheet" href="styles.css?v=9">
+  <script src="js/i18n.js?v=6" defer></script>
+  <script src="js/portal.js?v=8" defer></script>
 </head>
-<body class="min-h-screen bg-white">
+<body class="min-h-screen bg-[#f5f9fd]">
   <button data-language-toggle data-language-corner class="language-toggle fixed right-5 top-5 z-50" type="button">دری</button>
-  <main class="grid min-h-screen lg:grid-cols-2">
-    <section class="portal-curve relative hidden overflow-hidden bg-navy p-14 text-white lg:flex lg:flex-col lg:justify-between" aria-label="Staff portal introduction">
-      <a href="index.html" class="relative z-10 flex items-center gap-3"><span class="brand-mark-lg"><img src="assets/sepidan-logo.png" alt=""></span><span class="text-xl font-extrabold">Sepidan Staff Portal</span></a>
-      <div class="relative z-10 max-w-md pb-14"><h1 class="text-5xl font-extrabold leading-tight tracking-[-0.045em]">One secure portal. Three staff roles.</h1><p class="mt-5 text-lg leading-8 text-white/65">Authorized HR, Admin, and IT staff can access only the responsibilities assigned to their role.</p></div>
-      <p class="relative z-10 text-xs font-semibold uppercase tracking-[0.16em] text-white/40">Private · Role-based · Audited</p>
+  <main class="grid min-h-screen lg:grid-cols-[1.05fr_0.95fr]">
+    <section class="portal-curve relative hidden overflow-hidden bg-[#082b50] p-14 text-white lg:flex lg:flex-col lg:justify-between xl:p-20" aria-label="Staff portal introduction">
+      <a href="index.html" class="relative z-10 flex items-center gap-4"><span class="brand-mark-lg"><img src="assets/sepidan-logo-official.png" alt=""></span><span class="text-xl font-extrabold">Sepidan Staff Portal</span></a>
+      <div class="relative z-10 max-w-xl py-16"><div class="portal-logo-card mb-10"><img src="assets/sepidan-logo-official.png" alt="Sepidan Organization"></div><p class="eyebrow text-[#6ed0f2]">Authorized staff access</p><h1 class="mt-4 text-5xl font-black leading-[1.08] tracking-[-0.045em] xl:text-6xl">One secure portal. Three staff roles.</h1><p class="mt-6 max-w-lg text-lg leading-8 text-white/70">Authorized HR, Admin, and IT staff can access only the responsibilities assigned to their role.</p><div class="mt-8 flex flex-wrap gap-2" aria-label="Available staff roles"><span class="portal-role-chip">Admin</span><span class="portal-role-chip">HR</span><span class="portal-role-chip">IT</span></div></div>
+      <p class="relative z-10 text-xs font-bold uppercase tracking-[0.16em] text-white/45">Private · Role-based · Audited</p>
     </section>
-    <section class="flex items-start justify-center overflow-y-auto px-5 py-12 sm:px-10 lg:py-10">
-      <div class="w-full max-w-lg">
-        <div class="mb-10 text-center lg:hidden"><img src="assets/sepidan-logo.png" alt="Sepidan Organization" class="mx-auto h-28 w-28 rounded-xl object-contain"><p class="mt-3 font-extrabold text-navy">Sepidan Staff Portal</p></div>
-        <header><img src="assets/sepidan-logo.png" alt="Sepidan Organization" class="hidden h-32 w-32 rounded-xl object-contain lg:block"><h2 class="mt-4 text-4xl font-extrabold tracking-[-0.04em] text-navy">Welcome back</h2><p class="mt-3 text-lg text-muted">Sign in with your authorized staff account to continue.</p></header>
+    <section class="flex items-center justify-center overflow-y-auto px-5 py-14 sm:px-10 lg:bg-white lg:py-12 xl:px-16">
+      <div class="w-full max-w-[34rem]">
+        <div class="mb-10 text-center lg:hidden"><img src="assets/sepidan-logo-official.png" alt="Sepidan Organization" class="mx-auto w-40 rounded-xl object-contain"><p class="mt-3 font-extrabold text-navy">Sepidan Staff Portal</p></div>
+        <header><p class="eyebrow">Staff portal</p><h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-navy sm:text-5xl">Welcome back</h2><p class="mt-4 text-lg leading-7 text-muted">Sign in with your authorized staff account to continue.</p></header>
         <form data-login-form class="mt-9 space-y-5" novalidate>
           <div><label for="email" class="mb-2 block text-sm font-bold text-navy">Work email</label><input id="email" class="field" type="email" autocomplete="username" placeholder="you@sepidan.org" required></div>
           <div><label for="password" class="mb-2 block text-sm font-bold text-navy">Password</label><div class="relative"><input id="password" class="field pr-12" type="password" autocomplete="current-password" placeholder="Enter your password" required><button data-password-toggle type="button" class="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-muted hover:text-navy" aria-label="Show password"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
-          <div class="flex items-center justify-between gap-3 text-sm"><label class="flex items-center gap-2 text-muted"><input type="checkbox" class="h-4 w-4 rounded border-slate-300 accent-teal">Remember this device</label><button type="button" class="font-bold text-teal hover:text-[#009c88]">Forgot password?</button></div>
+          <div class="flex items-center justify-between gap-3 text-sm"><label class="flex items-center gap-2 text-muted"><input type="checkbox" class="h-4 w-4 rounded border-slate-300 accent-brandblue">Remember this device</label><button type="button" class="font-bold text-brandblue hover:text-[#087fb6]">Forgot password?</button></div>
           <p data-login-error hidden class="rounded-lg border border-red-200 bg-red-50 p-3 text-sm font-semibold text-red-700" role="alert"></p>
           <button data-login-button class="btn-primary w-full" type="submit">Sign in</button>
         </form>
         <div class="mt-7 flex items-center justify-center gap-2 text-sm text-muted"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Protected access for authorized staff only.</span></div>
-        <div class="mt-8 rounded-xl bg-mist p-4"><p class="text-xs font-extrabold uppercase tracking-wider text-muted">Prototype demo accounts</p><div class="mt-3 grid gap-2 sm:grid-cols-3"><button data-demo-account="admin@demo.sepidan" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-navy hover:border-teal">Admin</button><button data-demo-account="hr@demo.sepidan" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-navy hover:border-teal">HR</button><button data-demo-account="it@demo.sepidan" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-navy hover:border-teal">IT</button></div></div>
-        <a href="index.html" class="mt-7 flex items-center justify-center gap-2 text-sm font-bold text-teal hover:text-[#009c88]"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>Return to public website</a>
+        <div class="mt-8 rounded-2xl border border-[#dbe6f0] bg-[#f6faff] p-4"><p class="text-xs font-extrabold uppercase tracking-wider text-muted">Prototype demo accounts</p><div class="mt-3 grid gap-2 sm:grid-cols-3"><button data-demo-account="admin@demo.sepidan" class="demo-role-button border-t-brandblue">Admin</button><button data-demo-account="hr@demo.sepidan" class="demo-role-button border-t-caramel">HR</button><button data-demo-account="it@demo.sepidan" class="demo-role-button border-t-sun">IT</button></div></div>
+        <a href="index.html" class="mt-7 flex items-center justify-center gap-2 text-sm font-bold text-brandblue hover:text-[#087fb6]"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>Return to public website</a>
       </div>
     </section>
   </main>
