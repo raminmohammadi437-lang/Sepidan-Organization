@@ -2,11 +2,14 @@ tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"29LT Zarid Slab"', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        sans: ['"29LT Zawi"', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
       colors: {
         navy: '#0F1D2E',
         teal: '#00C2A8',
+        brandblue: '#1299D5',
+        sun: '#FFCE2F',
+        caramel: '#CF9262',
         mist: '#F2F4F7',
         ink: '#1D2939',
         muted: '#667085'

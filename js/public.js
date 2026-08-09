@@ -10,19 +10,19 @@ const pageLinks = [
 
 const logoMarkup = (size = 'md') => {
   const sizeClass = size === 'lg' ? 'brand-mark-lg' : 'brand-mark';
-  return `<span class="${sizeClass}" aria-hidden="true"><img src="assets/sepidan-logo.png" alt=""></span>`;
+  return `<span class="${sizeClass}" aria-hidden="true"><img src="assets/sepidan-logo-official.png" alt=""></span>`;
 };
 
 const shellHeader = document.querySelector('[data-site-header]');
 if (shellHeader) {
   shellHeader.innerHTML = `
     <a href="#main" class="sr-only fixed left-4 top-4 z-[100] rounded-lg bg-navy px-4 py-2 text-white focus:not-sr-only">Skip to content</a>
-    <header class="sticky top-0 z-40 border-b border-slate-100 bg-white/95 backdrop-blur">
-      <div class="public-shell flex h-20 items-center justify-between">
+    <header class="sticky top-0 z-40 border-b border-[#dbe6f0] bg-white/95 shadow-[0_10px_30px_-28px_rgba(15,29,46,.65)] backdrop-blur">
+      <div class="public-shell flex h-[88px] items-center justify-between">
         <a href="index.html" class="flex items-center gap-3" aria-label="Sepidan Organization home">${logoMarkup()}<span class="text-sm font-extrabold tracking-tight text-navy sm:text-base">Sepidan Organization</span></a>
         <div class="flex items-center gap-3">
-          <nav class="hidden items-center gap-6 md:flex" aria-label="Primary navigation">${pageLinks.map(([url, label]) => `<a class="nav-link ${currentPage === url ? 'active' : ''}" href="${url}">${label}</a>`).join('')}</nav>
-          <button data-language-toggle class="language-toggle" type="button">دری</button>
+          <nav class="hidden items-center gap-5 md:flex lg:gap-7" aria-label="Primary navigation">${pageLinks.map(([url, label]) => `<a class="nav-link ${currentPage === url ? 'active' : ''}" href="${url}">${label}</a>`).join('')}</nav>
+          <button data-language-toggle class="language-toggle gap-2" type="button"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><span data-language-label>دری</span></button>
           <button data-menu-button class="flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-navy md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
         </div>
       </div>
@@ -33,13 +33,13 @@ if (shellHeader) {
 const shellFooter = document.querySelector('[data-site-footer]');
 if (shellFooter) {
   shellFooter.innerHTML = `
-    <footer class="bg-navy py-14 text-white">
+    <footer class="border-t border-[#dbe6f0] bg-white py-16 text-navy">
       <div class="public-shell grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
-        <div><div class="flex items-center gap-3">${logoMarkup('lg')}<span class="text-lg font-extrabold">Sepidan Organization</span></div><p class="mt-4 max-w-sm text-sm leading-6 text-white/60">Cultivating confidence and empowering futures through education, culture, technology, and youth leadership.</p></div>
-        <div><h2 class="text-sm font-bold">Quick links</h2><nav class="mt-4 grid gap-3 text-sm text-white/60"><a class="hover:text-teal" href="about.html">About</a><a class="hover:text-teal" href="schedule.html">Schedule</a><a class="hover:text-teal" href="announcements.html">Announcements</a><a class="hover:text-teal" href="verify.html">Diploma verification</a></nav></div>
-        <div><h2 class="text-sm font-bold">Contact</h2><address class="mt-4 space-y-3 text-sm not-italic text-white/60"><p>Kabul, Afghanistan</p><p><a class="hover:text-teal" href="mailto:info@sepidan.org">info@sepidan.org</a></p><p><a class="hover:text-teal" href="https://wa.me/93791448387" target="_blank" rel="noreferrer">WhatsApp: 079 144 8387</a></p><p><a class="hover:text-teal" href="https://www.linkedin.com/company/sepidan-organization/" target="_blank" rel="noreferrer">LinkedIn</a></p></address></div>
+        <div><div class="flex items-center gap-3">${logoMarkup('lg')}<span class="text-lg font-extrabold">Sepidan Organization</span></div><p class="mt-4 max-w-sm text-sm leading-6 text-muted">Cultivating confidence and empowering futures through education, culture, technology, and youth leadership.</p></div>
+        <div><h2 class="text-sm font-extrabold">Quick links</h2><nav class="mt-4 grid gap-3 text-sm font-semibold text-muted"><a class="hover:text-brandblue" href="about.html">About</a><a class="hover:text-brandblue" href="schedule.html">Schedule</a><a class="hover:text-brandblue" href="announcements.html">Announcements</a><a class="hover:text-brandblue" href="verify.html">Diploma verification</a></nav></div>
+        <div><h2 class="text-sm font-extrabold">Contact</h2><address class="mt-4 space-y-3 text-sm not-italic text-muted"><p>Kabul, Afghanistan</p><p><a class="hover:text-brandblue" href="mailto:info@sepidan.org">info@sepidan.org</a></p><p><a class="hover:text-brandblue" href="https://wa.me/93791448387" target="_blank" rel="noreferrer">WhatsApp: 079 144 8387</a></p><p><a class="hover:text-brandblue" href="https://www.linkedin.com/company/sepidan-organization/" target="_blank" rel="noreferrer">LinkedIn</a></p></address></div>
       </div>
-      <div class="public-shell mt-12 border-t border-white/10 pt-6 text-xs text-white/45"><p>© 2026 Sepidan Organization. Public information sourced from the organization’s official LinkedIn presence.</p></div>
+      <div class="public-shell mt-12 border-t border-[#dbe6f0] pt-6 text-xs text-muted"><p>© 2026 Sepidan Organization. Public information sourced from the organization’s official LinkedIn presence.</p></div>
     </footer>`;
 }
 
@@ -62,10 +62,15 @@ document.querySelectorAll('[data-mobile-link]').forEach((link) => {
 
 const marquee = document.querySelector('.marquee');
 const marqueeTrack = marquee?.querySelector('.marquee-track');
+const marqueeToggle = document.querySelector('[data-marquee-toggle]');
+const marqueePauseIcon = document.querySelector('[data-marquee-pause]');
+const marqueePlayIcon = document.querySelector('[data-marquee-play]');
 let marqueeSpeedFrame;
+let marqueeManuallyPaused = false;
 if (marqueeTrack) marqueeTrack.dataset.marqueeRate = '1.000';
 
 function easeMarqueeSpeed(targetRate, duration) {
+  if (marqueeManuallyPaused && targetRate > 0) return;
   const animation = marqueeTrack?.getAnimations()[0];
   if (!animation || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -86,6 +91,23 @@ function easeMarqueeSpeed(targetRate, duration) {
   marqueeSpeedFrame = requestAnimationFrame(updateSpeed);
 }
 
+function refreshMarqueeControl() {
+  if (!marqueeToggle) return;
+  const englishLabel = marqueeManuallyPaused ? 'Resume program animation' : 'Pause program animation';
+  marqueeToggle.setAttribute('aria-pressed', String(marqueeManuallyPaused));
+  marqueeToggle.setAttribute('aria-label', window.SepidanI18n?.translatePhrase(englishLabel) || englishLabel);
+  marqueePauseIcon?.classList.toggle('hidden', marqueeManuallyPaused);
+  marqueePlayIcon?.classList.toggle('hidden', !marqueeManuallyPaused);
+}
+
+marqueeToggle?.addEventListener('click', () => {
+  marqueeManuallyPaused = !marqueeManuallyPaused;
+  easeMarqueeSpeed(marqueeManuallyPaused ? 0 : 1, marqueeManuallyPaused ? 900 : 700);
+  refreshMarqueeControl();
+});
+
+document.addEventListener('languagechange', refreshMarqueeControl);
+
 marquee?.addEventListener('pointerenter', () => easeMarqueeSpeed(0, 1400));
 marquee?.addEventListener('pointerleave', () => easeMarqueeSpeed(1, 850));
 marquee?.addEventListener('focusin', () => easeMarqueeSpeed(0, 1400));
@@ -105,6 +127,9 @@ const diplomaRecords = {
 const verifyForm = document.querySelector('[data-verify-form]');
 const verifyInput = document.querySelector('[data-verify-input]');
 const verifyResult = document.querySelector('[data-verify-result]');
+
+const requestedSerial = new URLSearchParams(location.search).get('serial');
+if (verifyInput && requestedSerial) verifyInput.value = requestedSerial;
 
 verifyForm?.addEventListener('submit', (event) => {
   event.preventDefault();
