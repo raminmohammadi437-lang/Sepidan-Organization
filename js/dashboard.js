@@ -123,25 +123,25 @@ document.querySelector('[data-stats]').innerHTML = config.stats.map(([label, val
   <article class="metric-card">
     <div class="flex items-start justify-between gap-4">
       <div><p class="text-sm font-semibold text-muted">${label}</p><p class="mt-2 text-3xl font-extrabold tracking-tight text-navy">${value}</p></div>
-      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-teal/12 text-teal">${icon(index === 0 ? 'Dashboard' : 'default', 'h-5 w-5')}</span>
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brandblue/10 text-brandblue">${icon(index === 0 ? 'Dashboard' : 'default', 'h-5 w-5')}</span>
     </div>
     <p class="mt-3 text-xs font-semibold text-muted">${note}</p>
   </article>`).join('');
 
 document.querySelector('[data-table-title]').textContent = config.tableTitle;
-document.querySelector('[data-table-head]').innerHTML = `<tr>${config.headers.map((head) => `<th class="whitespace-nowrap px-5 py-3 text-left text-xs font-bold uppercase tracking-wider text-muted">${head}</th>`).join('')}</tr>`;
-document.querySelector('[data-table-body]').innerHTML = config.rows.map((row) => `<tr class="border-t border-slate-100 hover:bg-mist/60">${row.map((cell, index) => `<td class="whitespace-nowrap px-5 py-3.5 text-sm ${index === row.length - 1 ? 'font-bold text-teal' : index === 1 ? 'font-semibold text-navy' : 'text-slate-600'}">${cell}</td>`).join('')}</tr>`).join('');
+document.querySelector('[data-table-head]').innerHTML = `<tr>${config.headers.map((head) => `<th class="whitespace-nowrap px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-muted">${head}</th>`).join('')}</tr>`;
+document.querySelector('[data-table-body]').innerHTML = config.rows.map((row) => `<tr class="border-t border-slate-100 hover:bg-mist/60">${row.map((cell, index) => `<td class="whitespace-nowrap px-4 py-3.5 text-[13px] ${index === row.length - 1 ? 'font-bold text-teal' : index === 1 ? 'font-semibold text-navy' : 'text-slate-600'}">${cell}</td>`).join('')}</tr>`).join('');
 
 document.querySelector('[data-activity]').innerHTML = config.activity.map((item, index) => `
   <li class="flex gap-3 border-b border-slate-100 py-3 last:border-0">
-    <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal/10 text-teal">${icon('default', 'h-4 w-4')}</span>
+    <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brandblue/10 text-brandblue">${icon('default', 'h-4 w-4')}</span>
     <div><p class="text-sm font-semibold text-navy">${item}</p><p class="mt-0.5 text-xs text-muted">${index * 13 + 8} minutes ago</p></div>
   </li>`).join('');
 
 document.querySelector('[data-quick-actions]').innerHTML = config.quick.map((item) => `
-  <button class="flex min-h-20 items-center justify-between rounded-xl border border-slate-200 p-4 text-left transition hover:border-teal hover:bg-teal/5" data-quick-action="${item}">
+  <button class="flex min-h-20 items-center justify-between rounded-xl border border-[#dbe6f0] p-4 text-left transition hover:border-brandblue hover:bg-brandblue/5" data-quick-action="${item}">
     <span><span class="block text-sm font-bold text-navy">${item}</span><span class="mt-1 block text-xs text-muted">Open this workflow</span></span>
-    <span class="text-teal">${icon('default', 'h-5 w-5')}</span>
+    <span class="text-brandblue">${icon('default', 'h-5 w-5')}</span>
   </button>`).join('');
 
 document.querySelector('[data-quick-actions]').addEventListener('click', (event) => {
@@ -153,7 +153,7 @@ const months = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
 document.querySelector('[data-chart]').innerHTML = config.chart.map((value, index) => `
   <div class="flex h-full flex-1 flex-col items-center justify-end gap-2">
     <span class="text-[10px] font-bold text-muted">${value}${session.role === 'admin' ? '0' : '%'}</span>
-    <div class="w-full max-w-10 rounded-t-md bg-teal transition-all" style="height:${Math.max(30, Math.round(value * 1.5))}px"></div>
+    <div class="w-full max-w-10 rounded-t-md bg-brandblue transition-all" style="height:${Math.max(30, Math.round(value * 1.5))}px"></div>
     <span class="text-[10px] text-muted">${months[index] || 'Aug'}</span>
   </div>`).join('');
 

@@ -1,4 +1,13 @@
 const dari = {
+  'Pause program animation': 'توقف حرکت برنامه‌ها',
+  'Resume program animation': 'ادامه حرکت برنامه‌ها',
+  'Diploma serial code': 'کُد سریال دیپلوم',
+  'Young people collaborating in a bright learning space': 'جوانان در حال همکاری در یک فضای روشن آموزشی',
+  'A bright modern learning environment': 'یک محیط روشن و مدرن آموزشی',
+  'Authorized staff access': 'دسترسی کارمندان مجاز',
+  'Available staff roles': 'نقش‌های موجود کارمندان',
+  'Staff portal': 'پورتال کارمندان',
+  'Search': 'جست‌وجو',
   'Sepidan Organization | Home': 'سازمان سپیدان | خانه',
   'Sepidan Organization | About': 'سازمان سپیدان | درباره ما',
   'Sepidan Organization | Schedule': 'سازمان سپیدان | برنامه زمانی',
@@ -360,7 +369,7 @@ function translateDynamicPhrase(english) {
 }
 
 function translateElementAttributes(element, language) {
-  const attributes = ['placeholder', 'aria-label', 'title'];
+  const attributes = ['placeholder', 'aria-label', 'title', 'alt'];
   if (!originalAttributes.has(element)) originalAttributes.set(element, {});
   const stored = originalAttributes.get(element);
   attributes.forEach((attribute) => {
@@ -383,7 +392,7 @@ function translateRoot(root, language) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let node;
   while ((node = walker.nextNode())) translateTextNode(node, language);
-  root.querySelectorAll?.('[placeholder], [aria-label], [title]').forEach((element) => translateElementAttributes(element, language));
+  root.querySelectorAll?.('[placeholder], [aria-label], [title], [alt]').forEach((element) => translateElementAttributes(element, language));
 }
 
 function refreshToggleLabels(language) {
@@ -393,7 +402,9 @@ function refreshToggleLabels(language) {
     const ariaLabel = language === 'fa' ? 'Switch to English' : 'تغییر زبان به دری';
     const buttonLanguage = language === 'fa' ? 'en' : 'fa';
     const buttonDirection = language === 'fa' ? 'ltr' : 'rtl';
-    if (button.textContent !== label) button.textContent = label;
+    const labelElement = button.querySelector('[data-language-label]');
+    if (labelElement && labelElement.textContent !== label) labelElement.textContent = label;
+    else if (button.textContent !== label) button.textContent = label;
     if (button.getAttribute('aria-label') !== ariaLabel) button.setAttribute('aria-label', ariaLabel);
     if (button.getAttribute('lang') !== buttonLanguage) button.setAttribute('lang', buttonLanguage);
     if (button.getAttribute('dir') !== buttonDirection) button.setAttribute('dir', buttonDirection);
